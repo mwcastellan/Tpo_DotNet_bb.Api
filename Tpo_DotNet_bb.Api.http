@@ -1,0 +1,6 @@
+@Tpo_DotNet_bb.Api_HostAddress = http://localhost:5201
+
+GET {{Tpo_DotNet_bb.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
