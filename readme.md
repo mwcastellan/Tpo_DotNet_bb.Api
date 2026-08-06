@@ -23,5 +23,5 @@ ENTRYPOINT ["dotnet", "Tpo_DotNet_bb.Api.dll"]
 docker build -t tpo-dotnet-api .
 3)
 docker run -p 8080:8080 tpo-dotnet-api Local Testing
-docker run -p 8080:80 tpo-dotnet-api -- LOCAL TESTING
+docker run -p 8080 tpo-dotnet-api -- LOCAL TESTING
 --> http://localhost:8080/swagger todos los router y controllers.

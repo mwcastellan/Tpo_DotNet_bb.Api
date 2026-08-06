@@ -27,7 +27,6 @@ builder.Services.AddSwaggerGen();
 
 // JWT
 var JWT_key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!);
-// mwc var JWT_time = int.Parse(builder.Configuration["Jwt:Time"]!);
 
 builder.Services.AddAuthentication(options =>
 {
@@ -63,5 +62,19 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+// Captura cualquier ruta que no haya sido encontrada
+app.MapFallback(async context =>
+{
+    context.Response.StatusCode = 404;
+    context.Response.ContentType = "application/json";
+
+    await context.Response.WriteAsJsonAsync(new
+    {
+        success = false,
+        error = "Endpoint no encontrado",
+        path = context.Request.Path,
+        mensaje = "La ruta solicitada no existe en la API."
+    });
+});
 
 app.Run();
