@@ -7,6 +7,18 @@ using Tpo_DotNet_bb.Api.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 // Base de datos
 var MySql_connect = builder.Configuration["MySql:Connect"]!;
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -57,7 +69,7 @@ app.UseSwaggerUI();
 //}
 
 app.UseHttpsRedirection();
-
+app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -71,7 +83,7 @@ app.MapFallback(async context =>
     await context.Response.WriteAsJsonAsync(new
     {
         success = false,
-        error = "Endpoint not found.",
+        error = "Endpoint Not Found.",
         path = context.Request.Path,
         mensaje = "La ruta solicitada no existe en la API."
     });
