@@ -71,7 +71,7 @@ app.MapFallback(async context =>
     await context.Response.WriteAsJsonAsync(new
     {
         success = false,
-        error = "EndPoint no encontrado",
+        error = "EndPoint No Encontrado",
         path = context.Request.Path,
         mensaje = "La ruta solicitada no existe en la API."
     });
