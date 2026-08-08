@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tpo_DotNet_bb.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9cae4c4daac7a105b65fd4dc102e1bb886d5dd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70a476ba6b106d50c7523312e95ed8e2e3fd2e0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tpo_DotNet_bb.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tpo_DotNet_bb.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
