@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Tpo_DotNet_bb.Api.Api.DTOs;
 using Tpo_DotNet_bb.Api.Api.Entities;
 
 namespace Tpo_DotNet_bb.Api.Api.Controllers;
