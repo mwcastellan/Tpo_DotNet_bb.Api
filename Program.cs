@@ -48,7 +48,11 @@ builder.Services.AddScoped
 // =====================================================
 // CONTROLLERS
 // =====================================================
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = null;
+    });
 
 // =====================================================
 // SWAGGER
