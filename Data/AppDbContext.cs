@@ -17,6 +17,7 @@ public class AppDbContext : DbContext
     public DbSet<Subcategoria> Subcategorias => Set<Subcategoria>();
     public DbSet<Estado_Pedidos> EstadoPedidos => Set<Estado_Pedidos>();
     public DbSet<Logs_Procesos> LogsProcesos => Set<Logs_Procesos>();
+    public DbSet<Vw_Productos> Vw_Productos => Set<Vw_Productos>();
 
     protected override void OnModelCreating(
         ModelBuilder modelBuilder)

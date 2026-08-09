@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 namespace Tpo_DotNet_bb.Api.Api.Entities;
 
-[Table("vw_pedido")]
-public partial class Vw_Pedido
+[Table("vw_pedidos")]
+public partial class Vw_Pedidos
 {
     public int ID { get; set; }
 

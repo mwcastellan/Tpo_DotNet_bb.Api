@@ -12,9 +12,9 @@ public partial class AppDbContext : DbContext
     {
     }
 
-    public virtual DbSet<Vw_Pedido> Vw_Pedidos { get; set; }
+    public virtual DbSet<Vw_Pedidos> Vw_Pedidos { get; set; }
 
-    public virtual DbSet<Vw_Producto> Vw_Productos { get; set; }
+    public virtual DbSet<Vw_Productos> Vw_Productos { get; set; }
 
     public virtual DbSet<Categoria> Categoria { get; set; }
 
@@ -40,7 +40,7 @@ public partial class AppDbContext : DbContext
             .UseCollation("utf8mb4_general_ci")
             .HasCharSet("utf8mb4");
 
-        modelBuilder.Entity<Vw_Pedido>(entity =>
+        modelBuilder.Entity<Vw_Pedidos>(entity =>
         {
             entity
                 .HasNoKey()
@@ -60,7 +60,7 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.IDPRODUCTO).HasColumnType("int(11)");
         });
 
-        modelBuilder.Entity<Vw_Producto>(entity =>
+        modelBuilder.Entity<Vw_Productos>(entity =>
         {
             entity
                 .HasNoKey()
