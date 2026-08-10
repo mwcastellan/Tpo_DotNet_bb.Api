@@ -10,7 +10,7 @@ namespace Tpo_DotNet_bb.Api.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Authorize]
-public class PedidosController : BaseController //ControllerBase
+public class PedidosController : BaseController
 {
     private readonly Entities.AppDbContext _context;
     private readonly ILogProcesoService _logService;

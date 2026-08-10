@@ -11,7 +11,7 @@ namespace Tpo_DotNet_bb.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ClientesController : ControllerBase
+public class ClientesController : BaseController
 {
     private readonly Entities.AppDbContext _context;
     private readonly IConfiguration _configuration;
@@ -43,12 +43,13 @@ public class ClientesController : ControllerBase
         return Ok(clientes);
     }
 
-    // GET api/clientes/5
-    [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetCliente(int id)
+    // GET api/clientes/
+    [HttpGet("cliente")]
+    public async Task<IActionResult> GetCliente()
     {
+        int idCliente = ObtenerIdCliente();
         var cliente = await _context.Clientes
-            .Where(x => x.ID == id)
+            .Where(x => x.ID == idCliente)
             .Select(x => new
             {
                 x.ID,
