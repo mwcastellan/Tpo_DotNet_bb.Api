@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Tpo_DotNet_bb.Api.Api.Entities;
+namespace Tpo_DotNet_bb.Api.Entities;
 
 [Table("clientes")]
 public partial class Clientes

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Tpo_DotNet_bb.Api.Api.DTOs;
+namespace Tpo_DotNet_bb.Api.DTOs;
 
 public class PedidoDto
 {

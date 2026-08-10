@@ -1,8 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
-namespace Tpo_DotNet_bb.Api.Api.DTOs
+namespace Tpo_DotNet_bb.Api.DTOs
 {
-    public class ClienteRegistroDto
+    public class ClienteDto
     {
         [Required(ErrorMessage = "EMAIL es obligatorio")]
         [EmailAddress(ErrorMessage = "EMAIL es incorrecto")]

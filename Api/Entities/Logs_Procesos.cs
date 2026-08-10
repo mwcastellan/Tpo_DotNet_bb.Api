@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-namespace Tpo_DotNet_bb.Api.Api.Entities;
+namespace Tpo_DotNet_bb.Api.Entities;
 
 [Table("logs_procesos")]
 public partial class Logs_Procesos

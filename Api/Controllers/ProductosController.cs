@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Tpo_DotNet_bb.Api.Api.Entities;
+using Tpo_DotNet_bb.Api.Entities;
 
-namespace Tpo_DotNet_bb.Api.Api.Controllers;
+namespace Tpo_DotNet_bb.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

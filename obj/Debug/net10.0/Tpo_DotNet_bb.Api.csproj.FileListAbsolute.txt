@@ -94,7 +94,6 @@ C:\Users\mcast\OneDrive\LOSMARCELOS_OD\MISCUENTAS\MARCELO\Varios\CURSOS\FULLSTAC
 C:\Users\mcast\OneDrive\LOSMARCELOS_OD\MISCUENTAS\MARCELO\Varios\CURSOS\FULLSTACK_JAVASCRIPTNODE_JS\GIT\tpo_dotnet_bb\Tpo_DotNet_bb.Api\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\mcast\OneDrive\LOSMARCELOS_OD\MISCUENTAS\MARCELO\Varios\CURSOS\FULLSTACK_JAVASCRIPTNODE_JS\GIT\tpo_dotnet_bb\Tpo_DotNet_bb.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\mcast\OneDrive\LOSMARCELOS_OD\MISCUENTAS\MARCELO\Varios\CURSOS\FULLSTACK_JAVASCRIPTNODE_JS\GIT\tpo_dotnet_bb\Tpo_DotNet_bb.Api\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\mcast\OneDrive\LOSMARCELOS_OD\MISCUENTAS\MARCELO\Varios\CURSOS\FULLSTACK_JAVASCRIPTNODE_JS\GIT\tpo_dotnet_bb\Tpo_DotNet_bb.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\mcast\OneDrive\LOSMARCELOS_OD\MISCUENTAS\MARCELO\Varios\CURSOS\FULLSTACK_JAVASCRIPTNODE_JS\GIT\tpo_dotnet_bb\Tpo_DotNet_bb.Api\obj\Debug\net10.0\Tpo_DotN.718BF495.Up2Date
 C:\Users\mcast\OneDrive\LOSMARCELOS_OD\MISCUENTAS\MARCELO\Varios\CURSOS\FULLSTACK_JAVASCRIPTNODE_JS\GIT\tpo_dotnet_bb\Tpo_DotNet_bb.Api\obj\Debug\net10.0\Tpo_DotNet_bb.Api.dll
 C:\Users\mcast\OneDrive\LOSMARCELOS_OD\MISCUENTAS\MARCELO\Varios\CURSOS\FULLSTACK_JAVASCRIPTNODE_JS\GIT\tpo_dotnet_bb\Tpo_DotNet_bb.Api\obj\Debug\net10.0\refint\Tpo_DotNet_bb.Api.dll

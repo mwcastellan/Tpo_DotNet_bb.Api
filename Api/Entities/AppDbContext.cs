@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Tpo_DotNet_bb.Api.Api.Entities;
+namespace Tpo_DotNet_bb.Api.Entities;
 
 public partial class AppDbContext : DbContext
 {
@@ -30,9 +30,8 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Subcategoria> Subcategoria { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySql("server=mysql-mcastellan.alwaysdata.net;database=mcastellan_grp9;user=363082_grp9;password=CaC24127GRP9", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.11.18-mariadb"));
+    // OnConfiguring removed to avoid hard-coded connection strings in source code.
+    // The DbContext should be configured externally via DbContextOptions and DI (see Program.cs).
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

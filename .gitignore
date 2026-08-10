@@ -1,0 +1,20 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# Publish output
+/Tpo_DotNet_bb.Api/bin/
+/Tpo_DotNet_bb.Api/obj/
+
+# NuGet
+*.nupkg
+
+# Logs

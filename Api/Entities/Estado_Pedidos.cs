@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Tpo_DotNet_bb.Api.Api.Entities;
+namespace Tpo_DotNet_bb.Api.Entities;
 
 [Table("estado_pedidos")]
 public class Estado_Pedidos

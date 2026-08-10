@@ -48,6 +48,11 @@ El Dockerfile está en la raíz del proyecto Tpo_DotNet_bb.Api. Ejemplos:
 
 Nota: configure variables de entorno para la cadena de conexión y la clave JWT cuando ejecute el contenedor.
 
+Seguridad y secretos
+--------------------
+- No mantenga credenciales en appsettings.json en el repositorio.
+- Añada bin/ y obj/ a .gitignore y elimine artefactos generados del control de versiones.
+- Consulte docs/SECURITY.md para instrucciones sobre variables de entorno, Secret Manager y cómo limpiar el historial de Git si las credenciales fueron comprometidas.
 Seguridad y autenticación
 -------------------------
 - La API usa JWT (Bearer) y realiza validación de tokens. En el login de clientes el token se devuelve también en una cookie llamada `tpo_dotnet_bb` con HttpOnly y Secure.

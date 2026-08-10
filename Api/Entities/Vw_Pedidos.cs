@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-namespace Tpo_DotNet_bb.Api.Api.Entities;
+namespace Tpo_DotNet_bb.Api.Entities;
 
 [Table("vw_pedidos")]
 public partial class Vw_Pedidos

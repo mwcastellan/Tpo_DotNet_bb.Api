@@ -1,4 +1,4 @@
-﻿namespace Tpo_DotNet_bb.Api.Api.Services
+﻿namespace Tpo_DotNet_bb.Api.Services
 {
     public class LogProcesoService : ILogProcesoService
     {

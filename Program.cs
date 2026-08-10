@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Tpo_DotNet_bb.Api.Api.Entities;
-using Tpo_DotNet_bb.Api.Api.Services;
+using Tpo_DotNet_bb.Api.Entities;
+using Tpo_DotNet_bb.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -117,8 +117,11 @@ var app = builder.Build();
 // =====================================================
 // SWAGGER
 // =====================================================
-app.UseSwagger();
-app.UseSwaggerUI();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 // =====================================================
 // PIPELINE

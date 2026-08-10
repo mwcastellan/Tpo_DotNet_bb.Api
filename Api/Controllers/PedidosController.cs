@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Tpo_DotNet_bb.Api.Api.DTOs;
-using Tpo_DotNet_bb.Api.Api.Entities;
-using Tpo_DotNet_bb.Api.Api.Services;
+using Tpo_DotNet_bb.Api.DTOs;
+using Tpo_DotNet_bb.Api.Entities;
+using Tpo_DotNet_bb.Api.Services;
 
-namespace Tpo_DotNet_bb.Api.Api.Controllers;
+namespace Tpo_DotNet_bb.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

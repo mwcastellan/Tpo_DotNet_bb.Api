@@ -5,10 +5,10 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Tpo_DotNet_bb.Api.Api.DTOs;
-using Tpo_DotNet_bb.Api.Api.Entities;
+using Tpo_DotNet_bb.Api.DTOs;
+using Tpo_DotNet_bb.Api.Entities;
 
-namespace Tpo_DotNet_bb.Api.Api.Controllers;
+namespace Tpo_DotNet_bb.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -69,7 +69,7 @@ public class ClientesController : ControllerBase
     // POST api/clientes/registrar
     [HttpPost("registrar")]
     public async Task<IActionResult> Registrar(
-        ClienteRegistroDto dto)
+        ClienteDto dto)
     {
         if (await _context.Clientes
             .AnyAsync(x => x.EMAIL == dto.Email))
@@ -119,11 +119,10 @@ public class ClientesController : ControllerBase
                 });
         }
 
-        var hasher = new PasswordHasher<Clientes>();
         bool passwordValida = BCrypt.Net.BCrypt.Verify(
-                                                    dto.Password,
-                                                    cliente.PASSWORD
-                                                     );
+            dto.Password,
+            cliente.PASSWORD
+        );
         if (!passwordValida)
         {
             return BadRequest(
@@ -158,7 +157,7 @@ public class ClientesController : ControllerBase
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Actualizar(
         int id,
-        ClienteUpdateDto dto)
+         ClienteDto dto)
     {
         var cliente = await _context.Clientes.FindAsync(id);
 
@@ -170,13 +169,8 @@ public class ClientesController : ControllerBase
         cliente.NOMBRE = dto.Nombre;
         cliente.DIRECCION = dto.Direccion;
         cliente.UpdatedAt = DateTime.Now;
-
-        if (!string.IsNullOrWhiteSpace(dto.Password))
-        {
-            var hasher = new PasswordHasher<Clientes>();
-
-            cliente.PASSWORD = hasher.HashPassword(cliente, dto.Password);
-        }
+        cliente.PASSWORD = BCrypt.Net.BCrypt.HashPassword(
+                   dto.Password);
 
         await _context.SaveChangesAsync();
 
