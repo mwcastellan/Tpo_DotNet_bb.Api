@@ -10,7 +10,7 @@ namespace Tpo_DotNet_bb.Api.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Authorize]
-public class PedidosController : ControllerBase
+public class PedidosController : BaseController //ControllerBase
 {
     private readonly Entities.AppDbContext _context;
     private readonly ILogProcesoService _logService;
@@ -157,16 +157,5 @@ public class PedidosController : ControllerBase
         });
     }
 
-    // ==========================================
-    // Obtiene IDCLIENTE desde JWT
-    // ==========================================
-    private int ObtenerIdCliente()
-    {
-        var claim = User.FindFirst("IDCLIENTE");
-
-        if (claim == null)
-            throw new UnauthorizedAccessException();
-
-        return int.Parse(claim.Value);
-    }
+   
 }

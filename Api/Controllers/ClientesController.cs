@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -46,7 +45,6 @@ public class ClientesController : ControllerBase
 
     // GET api/clientes/5
     [HttpGet("{id:int}")]
-    [Authorize]
     public async Task<IActionResult> GetCliente(int id)
     {
         var cliente = await _context.Clientes
@@ -204,5 +202,18 @@ public class ClientesController : ControllerBase
         var tokenHandler = new JwtSecurityTokenHandler();
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
+    }
+
+    // ==========================================
+    // Obtiene IDCLIENTE desde JWT
+    // ==========================================
+    public int ObtenerIdClienteOLD()
+    {
+        var claim = User.FindFirst("IDCLIENTE");
+
+        if (claim == null)
+            throw new UnauthorizedAccessException();
+
+        return int.Parse(claim.Value);
     }
 }
