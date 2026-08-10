@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -45,6 +46,7 @@ public class ClientesController : ControllerBase
 
     // GET api/clientes/5
     [HttpGet("{id:int}")]
+    [Authorize]
     public async Task<IActionResult> GetCliente(int id)
     {
         var cliente = await _context.Clientes
