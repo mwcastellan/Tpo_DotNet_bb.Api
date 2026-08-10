@@ -58,17 +58,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClienteUpdateDto"
+                "$ref": "#/components/schemas/ClienteDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClienteUpdateDto"
+                "$ref": "#/components/schemas/ClienteDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClienteUpdateDto"
+                "$ref": "#/components/schemas/ClienteDto"
               }
             }
           }
@@ -89,17 +89,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClienteRegistroDto"
+                "$ref": "#/components/schemas/ClienteDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClienteRegistroDto"
+                "$ref": "#/components/schemas/ClienteDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClienteRegistroDto"
+                "$ref": "#/components/schemas/ClienteDto"
               }
             }
           }
@@ -415,6 +415,44 @@
         }
       }
     },
+    "/api/Reporte01": {
+      "get": {
+        "tags": [
+          "Reporte01"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vw_Productos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vw_Productos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vw_Productos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Subcategoria": {
       "get": {
         "tags": [
@@ -496,107 +534,95 @@
   },
   "components": {
     "schemas": {
-      "ClienteRegistroDto": {
+      "ClienteDto": {
+        "required": [
+          "Apellido",
+          "Direccion",
+          "Email",
+          "Nombre",
+          "Password"
+        ],
         "type": "object",
         "properties": {
-          "email": {
+          "Email": {
+            "minLength": 1,
             "type": "string",
-            "format": "email",
-            "nullable": true
+            "format": "email"
           },
-          "apellido": {
-            "type": "string",
-            "nullable": true
+          "Apellido": {
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9]+$",
+            "type": "string"
           },
-          "nombre": {
-            "type": "string",
-            "nullable": true
+          "Nombre": {
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9]+$",
+            "type": "string"
           },
-          "direccion": {
-            "type": "string",
-            "nullable": true
+          "Direccion": {
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\s,.'-]{3,}$",
+            "type": "string"
           },
-          "password": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ClienteUpdateDto": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "format": "email",
-            "nullable": true
-          },
-          "apellido": {
-            "type": "string",
-            "nullable": true
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "direccion": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
+          "Password": {
+            "minLength": 1,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).{8,}$",
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
       "LoginDto": {
+        "required": [
+          "Email",
+          "Password"
+        ],
         "type": "object",
         "properties": {
-          "email": {
-            "type": "string",
-            "nullable": true
+          "Email": {
+            "minLength": 1,
+            "type": "string"
           },
-          "password": {
-            "type": "string",
-            "nullable": true
+          "Password": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
       "PedidoDto": {
         "required": [
-          "fechA_COMPRA",
-          "idestado",
-          "idproducto"
+          "FECHA_COMPRA",
+          "IDESTADO",
+          "IDPRODUCTO"
         ],
         "type": "object",
         "properties": {
-          "fechA_COMPRA": {
+          "FECHA_COMPRA": {
             "type": "string",
             "format": "date-time"
           },
-          "idproducto": {
+          "IDPRODUCTO": {
             "type": "integer",
             "format": "int32"
           },
-          "idestado": {
+          "IDESTADO": {
             "type": "integer",
             "format": "int32"
           },
-          "cantidad": {
+          "CANTIDAD": {
             "maximum": 1.7976931348623157E+308,
             "minimum": 0,
             "type": "integer",
             "format": "int32"
           },
-          "precio": {
+          "PRECIO": {
             "maximum": 1.7976931348623157E+308,
             "minimum": 0,
             "type": "number",
             "format": "double"
           },
-          "importe": {
+          "IMPORTE": {
             "maximum": 1.7976931348623157E+308,
             "minimum": 0,
             "type": "number",
@@ -608,43 +634,43 @@
       "Productos": {
         "type": "object",
         "properties": {
-          "id": {
+          "ID": {
             "type": "integer",
             "format": "int32"
           },
-          "descripcion": {
+          "DESCRIPCION": {
             "type": "string",
             "nullable": true
           },
-          "descripcioN_AMPLIA": {
+          "DESCRIPCION_AMPLIA": {
             "type": "string",
             "nullable": true
           },
-          "fechA_VTO": {
+          "FECHA_VTO": {
             "type": "string",
             "format": "date"
           },
-          "stocK_DISPONIBLE": {
+          "STOCK_DISPONIBLE": {
             "type": "integer",
             "format": "int32"
           },
-          "nombrE_IMAGEN": {
+          "NOMBRE_IMAGEN": {
             "type": "string",
             "nullable": true
           },
-          "precio": {
+          "PRECIO": {
             "type": "number",
             "format": "double"
           },
-          "idsubcategoria": {
+          "IDSUBCATEGORIA": {
             "type": "integer",
             "format": "int32"
           },
-          "createdAt": {
+          "CreatedAt": {
             "type": "string",
             "format": "date-time"
           },
-          "updatedAt": {
+          "UpdatedAt": {
             "type": "string",
             "format": "date-time"
           }
@@ -654,29 +680,87 @@
       "Subcategoria": {
         "type": "object",
         "properties": {
-          "id": {
+          "ID": {
             "type": "integer",
             "format": "int32"
           },
-          "descripcion": {
+          "DESCRIPCION": {
             "type": "string",
             "nullable": true
           },
-          "patH_IMAGEN": {
+          "PATH_IMAGEN": {
             "type": "string",
             "nullable": true
           },
-          "idcategoria": {
+          "IDCATEGORIA": {
             "type": "integer",
             "format": "int32"
           },
-          "createdAt": {
+          "CreatedAt": {
             "type": "string",
             "format": "date-time"
           },
-          "updatedAt": {
+          "UpdatedAt": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Vw_Productos": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DESCRIPCION": {
+            "type": "string",
+            "nullable": true
+          },
+          "DESCRIPCION_AMPLIA": {
+            "type": "string",
+            "nullable": true
+          },
+          "FECHA_VTO": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "STOCK_DISPONIBLE": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "NOMBRE_IMAGEN": {
+            "type": "string",
+            "nullable": true
+          },
+          "PRECIO": {
+            "type": "number",
+            "format": "double"
+          },
+          "IDSUBCATEGORIA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DESCRIPCION_SUBCATEGORIA": {
+            "type": "string",
+            "nullable": true
+          },
+          "PATH_SUBCATEGORIA": {
+            "type": "string",
+            "nullable": true
+          },
+          "IDCATEGORIA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DESCRIPCION_CATEGORIA": {
+            "type": "string",
+            "nullable": true
+          },
+          "PATH_CATEGORIA": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -698,6 +782,9 @@
     },
     {
       "name": "Productos"
+    },
+    {
+      "name": "Reporte01"
     },
     {
       "name": "Subcategoria"

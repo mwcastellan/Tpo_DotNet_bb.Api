@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.ClientesController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.ClientesController",
     "Method": "GetClientes",
     "RelativePath": "api/Clientes",
     "HttpMethod": "GET",
@@ -10,7 +10,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.ClientesController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.ClientesController",
     "Method": "GetCliente",
     "RelativePath": "api/Clientes/{id}",
     "HttpMethod": "GET",
@@ -26,7 +26,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.ClientesController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.ClientesController",
     "Method": "Actualizar",
     "RelativePath": "api/Clientes/{id}",
     "HttpMethod": "PUT",
@@ -40,14 +40,14 @@
       },
       {
         "Name": "dto",
-        "Type": "ClienteUpdateDto",
+        "Type": "Tpo_DotNet_bb.Api.DTOs.ClienteDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.ClientesController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.ClientesController",
     "Method": "Login",
     "RelativePath": "api/Clientes/login",
     "HttpMethod": "POST",
@@ -56,14 +56,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "LoginDto",
+        "Type": "Tpo_DotNet_bb.Api.DTOs.LoginDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.ClientesController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.ClientesController",
     "Method": "Registrar",
     "RelativePath": "api/Clientes/registrar",
     "HttpMethod": "POST",
@@ -72,14 +72,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "ClienteRegistroDto",
+        "Type": "Tpo_DotNet_bb.Api.DTOs.ClienteDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.Estado_PedidosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.Estado_PedidosController",
     "Method": "Get",
     "RelativePath": "api/Estado_Pedidos",
     "HttpMethod": "GET",
@@ -89,7 +89,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.Estado_PedidosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.Estado_PedidosController",
     "Method": "Get",
     "RelativePath": "api/Estado_Pedidos/{id}",
     "HttpMethod": "GET",
@@ -105,7 +105,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.Logs_ProcesosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.Logs_ProcesosController",
     "Method": "Get",
     "RelativePath": "api/Logs_Procesos",
     "HttpMethod": "GET",
@@ -115,7 +115,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.Logs_ProcesosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.Logs_ProcesosController",
     "Method": "Get",
     "RelativePath": "api/Logs_Procesos/{id}",
     "HttpMethod": "GET",
@@ -131,7 +131,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.PedidosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.PedidosController",
     "Method": "GetPedidos",
     "RelativePath": "api/Pedidos",
     "HttpMethod": "GET",
@@ -141,7 +141,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.PedidosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.PedidosController",
     "Method": "Crear",
     "RelativePath": "api/Pedidos",
     "HttpMethod": "POST",
@@ -150,14 +150,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "Tpo_DotNet_bb.Api.Api.DTOs.PedidoDto",
+        "Type": "Tpo_DotNet_bb.Api.DTOs.PedidoDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.PedidosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.PedidosController",
     "Method": "GetPedido",
     "RelativePath": "api/Pedidos/{id}",
     "HttpMethod": "GET",
@@ -173,7 +173,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.PedidosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.PedidosController",
     "Method": "Actualizar",
     "RelativePath": "api/Pedidos/{id}",
     "HttpMethod": "PUT",
@@ -187,14 +187,14 @@
       },
       {
         "Name": "dto",
-        "Type": "Tpo_DotNet_bb.Api.Api.DTOs.PedidoDto",
+        "Type": "Tpo_DotNet_bb.Api.DTOs.PedidoDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.PedidosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.PedidosController",
     "Method": "Eliminar",
     "RelativePath": "api/Pedidos/{id}",
     "HttpMethod": "DELETE",
@@ -210,7 +210,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.ProductosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.ProductosController",
     "Method": "Get",
     "RelativePath": "api/Productos",
     "HttpMethod": "GET",
@@ -219,7 +219,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tpo_DotNet_bb.Api.Api.Entities.Productos, Tpo_DotNet_bb.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tpo_DotNet_bb.Api.Entities.Productos, Tpo_DotNet_bb.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -230,7 +230,7 @@
     ]
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.ProductosController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.ProductosController",
     "Method": "Get",
     "RelativePath": "api/Productos/{ID}",
     "HttpMethod": "GET",
@@ -245,7 +245,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Tpo_DotNet_bb.Api.Api.Entities.Productos",
+        "Type": "Tpo_DotNet_bb.Api.Entities.Productos",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -256,7 +256,27 @@
     ]
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.SubcategoriaController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.Reporte01Controller",
+    "Method": "Get",
+    "RelativePath": "api/Reporte01",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tpo_DotNet_bb.Api.Entities.Vw_Productos, Tpo_DotNet_bb.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.SubcategoriaController",
     "Method": "Get",
     "RelativePath": "api/Subcategoria",
     "HttpMethod": "GET",
@@ -265,7 +285,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tpo_DotNet_bb.Api.Api.Entities.Subcategoria, Tpo_DotNet_bb.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tpo_DotNet_bb.Api.Entities.Subcategoria, Tpo_DotNet_bb.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -276,7 +296,7 @@
     ]
   },
   {
-    "ContainingType": "Tpo_DotNet_bb.Api.Api.Controllers.SubcategoriaController",
+    "ContainingType": "Tpo_DotNet_bb.Api.Controllers.SubcategoriaController",
     "Method": "Get",
     "RelativePath": "api/Subcategoria/{ID}",
     "HttpMethod": "GET",
@@ -291,7 +311,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Tpo_DotNet_bb.Api.Api.Entities.Subcategoria",
+        "Type": "Tpo_DotNet_bb.Api.Entities.Subcategoria",
         "MediaTypes": [
           "text/plain",
           "application/json",
