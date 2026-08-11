@@ -12,14 +12,14 @@ namespace Tpo_DotNet_bb.Api.Controllers;
 [Authorize]
 public class PedidosController : BaseController
 {
-    private readonly Entities.AppDbContext _context;
     private readonly ILogProcesoService _logService;
 
     public PedidosController(
         Entities.AppDbContext context,
+        IConfiguration configuration,
         ILogProcesoService logService)
+        : base(context, configuration)
     {
-        _context = context;
         _logService = logService;
     }
 
@@ -157,5 +157,5 @@ public class PedidosController : BaseController
         });
     }
 
-   
+
 }

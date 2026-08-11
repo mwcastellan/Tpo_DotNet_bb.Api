@@ -30,9 +30,6 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Subcategoria> Subcategoria { get; set; }
 
-    // OnConfiguring removed to avoid hard-coded connection strings in source code.
-    // The DbContext should be configured externally via DbContextOptions and DI (see Program.cs).
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder
