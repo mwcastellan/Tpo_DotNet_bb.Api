@@ -1,6 +1,6 @@
 # Tpo_DotNet_bb.Api — Documentación actualizada
 
-Resumen
+Resumen 
 -------
 Backend REST en ASP.NET Core (.NET 10) para gestión de clientes, productos y pedidos. Incluye autenticación JWT (token también enviado en cookie), acceso a MariaDB/MySQL mediante Entity Framework Core y documentación Swagger (habilitada solo en Development).
 
