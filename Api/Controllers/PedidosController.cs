@@ -87,7 +87,7 @@ public class PedidosController : BaseController
 
         return Ok(new
         {
-            mensaje = "Pedido creado correctamente"
+            mensaje = "Pedido creado correctamente."
         });
 
         // await _logService.GrabarAsync($"Crear Pedido - IDCLIENTE {idCliente}");
@@ -125,7 +125,7 @@ public class PedidosController : BaseController
         return Ok(new
         {
             mensaje =
-                "Pedido actualizado correctamente"
+                "Pedido actualizado correctamente."
         });
     }
 

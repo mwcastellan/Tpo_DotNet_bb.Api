@@ -67,7 +67,7 @@ public class ClientesController : BaseController
             .AnyAsync(x => x.EMAIL == dto.Email))
         {
             return BadRequest(
-                new { mensaje = "El email ya existe" });
+                new { mensaje = "El email ya existe." });
         }
 
         var cliente = new Clientes
@@ -107,7 +107,7 @@ public class ClientesController : BaseController
                 new
                 {
                     mensaje =
-                        "Cliente o contraseña incorrecta"
+                        "Cliente o contraseña incorrecta."
                 });
         }
 
@@ -120,7 +120,7 @@ public class ClientesController : BaseController
             return BadRequest(
                 new
                 {
-                    mensaje = "Cliente o contraseña incorrecta"
+                    mensaje = "Cliente o contraseña incorrecta."
                 });
         }
 
@@ -140,7 +140,7 @@ public class ClientesController : BaseController
 
         return Ok(new
         {
-            mensaje = "Login correcto",
+            mensaje = "Login correcto.",
             token
         });
     }
@@ -169,7 +169,7 @@ public class ClientesController : BaseController
         return Ok(new
         {
             mensaje =
-                "Cliente actualizado correctamente"
+                "Cliente actualizado correctamente."
         });
     } // ← cerrar el método Actualizar
 
